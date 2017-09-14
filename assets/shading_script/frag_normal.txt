@@ -1,0 +1,31 @@
+precision mediump float;
+uniform vec4 uBlendFactor; //(texture0, texture1, texture2, color)
+uniform vec4 uPaintColor;
+uniform float uAlpha;
+uniform float uMixAlpha;
+
+uniform sampler2D sTexture;
+varying vec2 vTexCoord;
+
+void main()
+{
+    vec4 color = vec4(0, 0, 0, 0);
+    if (uBlendFactor.x > 0.05) {
+         color += texture2D(sTexture, vTexCoord) * uBlendFactor.x * uAlpha;
+    }
+
+    if (uBlendFactor.w > 0.05) {
+        color += uPaintColor*uAlpha;
+    }
+
+    if(color.a < 0.01) {
+        discard;
+    }
+
+    gl_FragColor = color;
+
+    if (uMixAlpha >= 0.0) {
+       gl_FragColor.a = uMixAlpha;
+    }
+//gl_FragColor = vec4(0.0,1.0,0.0,0.65);
+}

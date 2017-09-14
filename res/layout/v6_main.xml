@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/v6_gl_surface_view" />
+    <com.android.camera.ui.V6SurfaceViewFrame android:id="@id/v6_surface_view_parent" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.android.camera.camera_adapter.camera2.AutoFitSurfaceView android:id="@id/mdp_preview_content" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_alignParentStart="true" />
+    <com.android.camera.camera_adapter.camera2.AutoFitSurfaceView android:id="@id/mdp_preview_content_mono" android:visibility="gone" android:layout_width="480.0px" android:layout_height="640.0px" android:layout_alignParentTop="true" android:layout_alignParentStart="true" />
+    <FrameLayout android:id="@id/main_content" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <TextView android:id="@id/camera_debug_content" android:visibility="gone" style="@style/DebugTextStyle" />
+    <include layout="@layout/front_camera_hint_popup" />
+</FrameLayout>

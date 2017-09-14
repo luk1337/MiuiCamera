@@ -1,0 +1,23 @@
+!!brut.androlib.meta.MetaInfo
+apkFileName: MiuiCamera.apk
+compressionType: false
+doNotCompress:
+- arsc
+isFrameworkApk: false
+packageInfo:
+  forcedPackageId: '127'
+  renameManifestPackage: null
+sdkInfo:
+  minSdkVersion: '17'
+  targetSdkVersion: '@integer/targe_sdk_version'
+sharedLibrary: false
+unknownFiles: {}
+usesFramework:
+  ids:
+  - 1
+  - 16
+  tag: null
+version: 2.2.4
+versionInfo:
+  versionCode: '1'
+  versionName: '1'
