@@ -2141,7 +2141,17 @@
     .line 372
     sget-boolean v0, Lcom/android/camera/Device;->IS_H3C:Z
 
+    if-nez v0, :cond_0
+
+    sget-boolean v0, Lcom/android/camera/Device;->IS_B7:Z
+
+    :goto_0
     return v0
+
+    :cond_0
+    const/4 v0, 0x1
+
+    goto :goto_0
 .end method
 
 .method public static isSupportedTiltShift()Z
