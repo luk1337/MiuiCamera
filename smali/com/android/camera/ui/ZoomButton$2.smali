@@ -1,0 +1,64 @@
+.class Lcom/android/camera/ui/ZoomButton$2;
+.super Landroid/os/Handler;
+.source "ZoomButton.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/android/camera/ui/ZoomButton;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic this$0:Lcom/android/camera/ui/ZoomButton;
+
+
+# direct methods
+.method constructor <init>(Lcom/android/camera/ui/ZoomButton;)V
+    .locals 0
+    .param p1, "this$0"    # Lcom/android/camera/ui/ZoomButton;
+
+    .prologue
+    .line 111
+    iput-object p1, p0, Lcom/android/camera/ui/ZoomButton$2;->this$0:Lcom/android/camera/ui/ZoomButton;
+
+    invoke-direct {p0}, Landroid/os/Handler;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public handleMessage(Landroid/os/Message;)V
+    .locals 1
+    .param p1, "msg"    # Landroid/os/Message;
+
+    .prologue
+    .line 113
+    iget v0, p1, Landroid/os/Message;->what:I
+
+    packed-switch v0, :pswitch_data_0
+
+    .line 112
+    :goto_0
+    return-void
+
+    .line 115
+    :pswitch_0
+    iget-object v0, p0, Lcom/android/camera/ui/ZoomButton$2;->this$0:Lcom/android/camera/ui/ZoomButton;
+
+    invoke-virtual {v0}, Lcom/android/camera/ui/ZoomButton;->dismissPopup()Z
+
+    goto :goto_0
+
+    .line 113
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
